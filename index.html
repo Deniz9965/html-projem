@@ -1,0 +1,102 @@
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>hacekd by solveig</title> 
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'VT323', monospace;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glitch {
+            0% { transform: skewX(0deg); }
+            20% { transform: skewX(10deg); }
+            40% { transform: skewX(-10deg); }
+            60% { transform: skewX(5deg); }
+            80% { transform: skewX(-5deg); }
+            100% { transform: skewX(0deg); }
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .glitch {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            animation: glitch 0.3s infinite, flicker 1s infinite alternate;
+        }
+
+        .terminal {
+            font-size: 1.5rem;
+            display: inline-block;
+            border-right: 2px solid red;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end) infinite alternate, flicker 0.8s infinite alternate;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            animation: glitch 1s infinite;
+        }
+
+        .warning {
+            position: absolute;
+            width: 100%;
+            top: 10px;
+            font-size: 1.2rem;
+            background: red;
+            color: black;
+            padding: 5px 0;
+            animation: warningScroll 10s linear infinite;
+        }
+
+        @keyframes warningScroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+    </style> 
+ </head> 
+ <body> 
+  <div class="warning">
+   HACKED BY AGRASİVVE
+  </div> 
+  <div class="container"> 
+   <img src="https://images.complex.com/complex/image/upload/t_in_content_image/mlltcipvluktiqzq2zib.gif"> 
+   <h1 class="glitch">HACKED BY AGRASİVVE</h1> 
+   <h1 class="terminal">Gölgelerde saklandığımızı sanıyorlar. Biz gölgeleriz.....</h1> 
+   <h1 class="glitch">WELCOME TO THE TURKEY-CYBER-SPACE</h1> 
+  </div> 
+ </body>
+</html>
